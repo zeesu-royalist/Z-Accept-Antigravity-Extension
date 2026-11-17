@@ -6,3 +6,5 @@ tsconfig.json
 .git/**
 .gitignore
 node_modules/**
+**/.DS_Store
+media/logo_base64.txt
