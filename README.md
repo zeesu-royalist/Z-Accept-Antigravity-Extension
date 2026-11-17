@@ -13,8 +13,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/zeesuroyalist/z-accept"><img src="https://img.shields.io/badge/Version-1.0.0-0e639c.svg?style=flat-square" alt="Version"></a>
+  <a href="https://github.com/zeesu-royalist/Z-Accept-Antigravity-Extension"><img src="https://img.shields.io/badge/Version-1.0.0-0e639c.svg?style=flat-square" alt="Version"></a>
   <a href="LICENSE.txt"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License"></a>
+  <a href="https://zeesu-royalist.vercel.app"><img src="https://img.shields.io/badge/Author-Zeesu%20Royalist-ff007f.svg?style=flat-square" alt="Author"></a>
   <a href="#"><img src="https://img.shields.io/badge/Platform-Antigravity%20IDE%20%7C%20VS%20Code-4e9de0.svg?style=flat-square" alt="Platform"></a>
   <a href="#"><img src="https://img.shields.io/badge/Privacy-100%25%20Local-success.svg?style=flat-square" alt="Privacy"></a>
 </p>
@@ -144,6 +145,15 @@ Customize Z-Accept behavior in your VS Code / Antigravity `settings.json`:
 
 ---
 
+## 👨‍💻 Author & Maintainer
+
+**Zeesu Royalist**  
+- 🌐 **Website**: [zeesu-royalist.vercel.app](https://zeesu-royalist.vercel.app)
+- 🐙 **GitHub**: [@zeesu-royalist](https://github.com/zeesu-royalist)
+- 📦 **Project Repository**: [Z-Accept-Antigravity-Extension](https://github.com/zeesu-royalist/Z-Accept-Antigravity-Extension)
+
+---
+
 ## 📄 License
 
-Licensed under the [MIT License](LICENSE.txt). Developed by [zeesuroyalist](https://github.com/zeesuroyalist).
+Licensed under the [MIT License](LICENSE.txt). © 2026 [Zeesu Royalist](https://zeesu-royalist.vercel.app). All rights reserved.
