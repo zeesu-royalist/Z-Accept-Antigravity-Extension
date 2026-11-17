@@ -8,8 +8,12 @@
   "icon": "media/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeesuroyalist/z-accept"
+    "url": "https://github.com/zeesu-royalist/Z-Accept-Antigravity-Extension"
   },
+  "bugs": {
+    "url": "https://github.com/zeesu-royalist/Z-Accept-Antigravity-Extension/issues"
+  },
+  "homepage": "https://github.com/zeesu-royalist/Z-Accept-Antigravity-Extension#readme",
   "engines": {
     "vscode": "^1.85.0"
   },
