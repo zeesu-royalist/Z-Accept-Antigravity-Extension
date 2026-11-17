@@ -1,0 +1,157 @@
+{
+  "name": "z-accept",
+  "displayName": "Z-Accept",
+  "description": "Auto-confirm intermediate AI tool popups (git, cd, ls, npm) while keeping full code diff review manual.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "zeesuroyalist",
+  "icon": "media/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeesuroyalist/z-accept"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "AI",
+    "Programming Languages",
+    "Security"
+  ],
+  "keywords": [
+    "ai",
+    "auto-accept",
+    "antigravity",
+    "security",
+    "permission",
+    "code-acceptance"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:z-accept.mainView",
+    "onCommand:z-accept.focusView",
+    "onCommand:z-accept.toggleAutoAccept",
+    "onCommand:z-accept.toggleSecurityMonitor",
+    "onCommand:z-accept.syncTurboMode",
+    "onCommand:z-accept.acceptPendingNow",
+    "onCommand:z-accept.testOutsideAccess"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "z-accept-container",
+          "title": "Z-Accept",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "z-accept-container": [
+        {
+          "type": "webview",
+          "id": "z-accept.mainView",
+          "name": "Z-Accept Control"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "z-accept.focusView",
+        "title": "Z-Accept: Focus Control Panel",
+        "category": "Z-Accept"
+      },
+      {
+        "command": "z-accept.toggleAutoAccept",
+        "title": "Z-Accept: Toggle Tool/Prompt Auto-Bypass",
+        "category": "Z-Accept"
+      },
+      {
+        "command": "z-accept.toggleSecurityMonitor",
+        "title": "Z-Accept: Toggle Access Guard",
+        "category": "Z-Accept"
+      },
+      {
+        "command": "z-accept.syncTurboMode",
+        "title": "Z-Accept: Sync IDE Turbo Auto-Execution",
+        "category": "Z-Accept",
+        "icon": "$(zap)"
+      },
+      {
+        "command": "z-accept.acceptPendingNow",
+        "title": "Z-Accept: Accept Pending Changes Now",
+        "category": "Z-Accept",
+        "icon": "$(check)"
+      },
+      {
+        "command": "z-accept.clearHistory",
+        "title": "Z-Accept: Clear Access History",
+        "category": "Z-Accept",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "z-accept.testOutsideAccess",
+        "title": "Z-Accept: Test Protected Outside Access",
+        "category": "Z-Accept"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "z-accept.syncTurboMode",
+          "when": "view == z-accept.mainView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "z-accept.acceptPendingNow",
+          "when": "view == z-accept.mainView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "z-accept.clearHistory",
+          "when": "view == z-accept.mainView",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Z-Accept",
+      "properties": {
+        "zAccept.autoConfirmSteps": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically confirm intermediate AI agent steps, tool executions (e.g. git status, terminal commands), and permission popups."
+        },
+        "zAccept.autoAcceptDiffs": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically accept final editor code diffs/files. Keep disabled (false) to manually review full code diffs before accepting."
+        },
+        "zAccept.autoAccept.delayMs": {
+          "type": "number",
+          "default": 500,
+          "description": "Debounce delay (ms) for code checks."
+        },
+        "zAccept.securityMonitor.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Monitor and require user permission for AI file access outside the workspace."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --no-dependencies",
+    "test": "npm run compile && node ./out/test/testRunner.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^4.1.1",
+    "typescript": "^5.3.3"
+  }
+}

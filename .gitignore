@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build & Compilation Outputs
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Extension Package Bundles
+*.vsix
+
+# Temporary / Conversion Assets
+media/logo_base64.txt
+
+# Test Outputs & Runners
+.vscode-test/
+coverage/
+
+# Logs & Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Metadata & Thumbnails
+.DS_Store
+*/.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# Environment & Local Overrides
+.env
+.env.local
+.env.*.local
+
+# Local Editor Configurations (keep team settings only)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
